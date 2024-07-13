@@ -8,10 +8,7 @@
 @prefix schema: <http://schema.org/>.
 @prefix ex: <http://example.org/pokemon#>.
 
-<<<<<<< Updated upstream
-ex:pokemon a rdfs:Class .
 =======
 ex:pokemon a rdfs:Class , owl:Class .
 
 ex:Bulbasaur a ex:pokemon .
->>>>>>> Stashed changes

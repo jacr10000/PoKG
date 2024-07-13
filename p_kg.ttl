@@ -8,4 +8,4 @@
 @prefix schema: <http://schema.org/>.
 @prefix ex: <http://example.org/pokemon#>.
 
-ex:pokemon a rdfs:Class .
+ex:pokemon a rdfs:Class , owl:Class

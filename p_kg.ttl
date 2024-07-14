@@ -35,5 +35,5 @@ ex:electric rdfs:subClassOf ex:type .
 ex:poison rdfs:subClassOf ex:type .
 
 ex:Bulbasaur a ex:pokemon ; ex:isType ex:grass .
-ex:Ivysaur a ex:pokemon ex:evolvesFrom ex:Bulbasaur ; ex:isType ex:grass .
-ex:Venusaur a ex:pokemon ; ex:evolvesFrom ex:Bulbasaur ; ex:isType ex:grass , ex:poison .
+ex:Ivysaur a ex:pokemon ; ex:evolvesFrom ex:Bulbasaur ; ex:isType ex:grass .
+ex:Venusaur a ex:pokemon ; ex:evolvesFrom ex:Ivysaur ; ex:isType ex:grass , ex:poison .

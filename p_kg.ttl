@@ -1,14 +1,39 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix schema: <http://schema.org/>.
-@prefix ex: <http://example.org/pokemon#>.
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://example.org/pokemon#> .
 
-=======
-ex:pokemon a rdfs:Class , owl:Class .
+ex:pokemon a owl:Class .
+ex:type a owl:Class .
+ex:move a owl:Class .
 
-ex:Bulbasaur a ex:pokemon .
+ex:isType a rdf:Property ; rdfs:domain ex:pokemon ; rdfs:range ex:type .
+ex:moveType a rdf:Property ; rdfs:domain ex:move ; rdfs:range ex:type .
+ex:evolvesFrom a rdf:Property ; rdfs:domain ex:pokemon ; rdfs:range ex:pokemon .
+
+ex:normal rdfs:subClassOf ex:type .
+ex:fire rdfs:subClassOf ex:type .
+ex:water rdfs:subClassOf ex:type .
+ex:grass rdfs:subClassOf ex:type .
+ex:bug rdfs:subClassOf ex:type .
+ex:fighting rdfs:subClassOf ex:type .
+ex:ghost rdfs:subClassOf ex:type .
+ex:dark rdfs:subClassOf ex:type .
+ex:psychic rdfs:subClassOf ex:type .
+ex:flying rdfs:subClassOf ex:type .
+ex:ice rdfs:subClassOf ex:type .
+ex:dragon rdfs:subClassOf ex:type .
+ex:steel rdfs:subClassOf ex:type .
+ex:rock rdfs:subClassOf ex:type .
+ex:ground rdfs:subClassOf ex:type .
+ex:fairy rdfs:subClassOf ex:type .
+ex:electric rdfs:subClassOf ex:type .
+ex:poison rdfs:subClassOf ex:type .
+
+ex:Bulbasaur a ex:pokemon ; ex:isType ex:grass .
+ex:Ivysaur a ex:pokemon ; ex:evolvesFrom ex:Bulbasaur ; ex:isType ex:grass .
+ex:Venusaur a ex:pokemon ; ex:evolvesFrom ex:Ivysaur ; ex:isType ex:grass , ex:poison .

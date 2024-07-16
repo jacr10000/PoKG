@@ -14,25 +14,43 @@ ex:move a owl:Class .
 ex:isType a rdf:Property ; rdfs:domain ex:pokemon ; rdfs:range ex:type .
 ex:moveType a rdf:Property ; rdfs:domain ex:move ; rdfs:range ex:type .
 ex:evolvesFrom a rdf:Property ; rdfs:domain ex:pokemon ; rdfs:range ex:pokemon .
+ex:weakAgainst a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type .
 
-ex:normal rdfs:subClassOf ex:type .
-ex:fire rdfs:subClassOf ex:type .
-ex:water rdfs:subClassOf ex:type .
-ex:grass rdfs:subClassOf ex:type .
-ex:bug rdfs:subClassOf ex:type .
-ex:fighting rdfs:subClassOf ex:type .
-ex:ghost rdfs:subClassOf ex:type .
-ex:dark rdfs:subClassOf ex:type .
-ex:psychic rdfs:subClassOf ex:type .
-ex:flying rdfs:subClassOf ex:type .
-ex:ice rdfs:subClassOf ex:type .
-ex:dragon rdfs:subClassOf ex:type .
-ex:steel rdfs:subClassOf ex:type .
-ex:rock rdfs:subClassOf ex:type .
-ex:ground rdfs:subClassOf ex:type .
-ex:fairy rdfs:subClassOf ex:type .
-ex:electric rdfs:subClassOf ex:type .
-ex:poison rdfs:subClassOf ex:type .
+ex:normal rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting .
+
+ex:fire rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:rock, ex:ground .
+
+ex:water rdfs:subClassOf ex:type ; ex:weakAgainst ex:grass , ex:electric .
+
+ex:grass rdfs:subClassOf ex:type ; ex:weakAgainst ex:fire , ex:bug, ex:poison .
+
+ex:bug rdfs:subClassOf ex:type ; ex:weakAgainst ex:fire , ex:poison , ex:rock .
+
+ex:fighting rdfs:subClassOf ex:type ; ex:weakAgainst ex:psychic , ex:flying , ex:fairy .
+
+ex:ghost rdfs:subClassOf ex:type ; ex:weakAgainst ex:dark , ex:ghost .
+
+ex:dark rdfs:subClassOf ex:type ; ex:weakAgainst ex:bug , ex:fighting, ex:fairy .
+
+ex:psychic rdfs:subClassOf ex:type ; ex:weakAgainst ex:bug , ex:ghost, ex:dark .
+
+ex:flying rdfs:subClassOf ex:type ; ex:weakAgainst ex:electric , ex:ice, ex:rock .
+
+ex:ice rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting , ex:fire, ex:rock , ex:steel .
+
+ex:dragon rdfs:subClassOf ex:type ; ex:weakAgainst ex:dragon, ex:ice .
+
+ex:steel rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting , ex:fire, ex:ground .
+
+ex:rock rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:grass, ex:ground , ex:fighting , ex:steel .
+
+ex:ground rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:grass, ex:ice .
+
+ex:fairy rdfs:subClassOf ex:type ; ex:weakAgainst ex:poison , ex:steel .
+
+ex:electric rdfs:subClassOf ex:type ; ex:weakAgainst ex:ground .
+
+ex:poison rdfs:subClassOf ex:type ; ex:weakAgainst ex:ground , ex:psychic .
 
 ex:Bulbasaur a ex:pokemon ; ex:isType ex:grass .
 ex:Ivysaur a ex:pokemon ; ex:evolvesFrom ex:Bulbasaur ; ex:isType ex:grass .

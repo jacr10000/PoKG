@@ -15,8 +15,10 @@ ex:isType a rdf:Property ; rdfs:domain ex:pokemon ; rdfs:range ex:type .
 ex:moveType a rdf:Property ; rdfs:domain ex:move ; rdfs:range ex:type .
 ex:evolvesFrom a rdf:Property ; rdfs:domain ex:pokemon ; rdfs:range ex:pokemon .
 ex:weakAgainst a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type .
+ex:immuneTo a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type .
 
 ex:normal rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting .
+ex:normal ex:immuneTo ex:ghost .
 
 ex:fire rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:rock, ex:ground .
 
@@ -29,24 +31,29 @@ ex:bug rdfs:subClassOf ex:type ; ex:weakAgainst ex:fire , ex:poison , ex:rock .
 ex:fighting rdfs:subClassOf ex:type ; ex:weakAgainst ex:psychic , ex:flying , ex:fairy .
 
 ex:ghost rdfs:subClassOf ex:type ; ex:weakAgainst ex:dark , ex:ghost .
+ex:ghost ex:immuneTo ex:normal , ex:fighting .
 
 ex:dark rdfs:subClassOf ex:type ; ex:weakAgainst ex:bug , ex:fighting, ex:fairy .
+ex:dark ex:immuneTo ex:psychic .
 
 ex:psychic rdfs:subClassOf ex:type ; ex:weakAgainst ex:bug , ex:ghost, ex:dark .
 
 ex:flying rdfs:subClassOf ex:type ; ex:weakAgainst ex:electric , ex:ice, ex:rock .
+ex:flying ex:immuneTo ex:ground .
 
 ex:ice rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting , ex:fire, ex:rock , ex:steel .
 
 ex:dragon rdfs:subClassOf ex:type ; ex:weakAgainst ex:dragon, ex:ice .
 
 ex:steel rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting , ex:fire, ex:ground .
+ex:steel ex:immuneTo ex:poison .
 
 ex:rock rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:grass, ex:ground , ex:fighting , ex:steel .
 
 ex:ground rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:grass, ex:ice .
 
 ex:fairy rdfs:subClassOf ex:type ; ex:weakAgainst ex:poison , ex:steel .
+ex:fairy ex:immuneTo ex:dragon .
 
 ex:electric rdfs:subClassOf ex:type ; ex:weakAgainst ex:ground .
 

@@ -14,4 +14,7 @@ sh:PokeShape a sh:NodeShape;
     sh:property [
         sh:path ex:isType ;
         sh:minCount 1 ;
-        sh:maxCount 2 ] .
+        sh:maxCount 2 ] ;
+    sh:property [
+        sh:path ex:evolvesFrom ;
+        sh:maxCount 1 ] .

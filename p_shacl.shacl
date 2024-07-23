@@ -9,12 +9,41 @@
 @prefix ex: <http://example.org/pokemon#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
+#PokeShape for ex:pokemon properties
 sh:PokeShape a sh:NodeShape;
     sh:targetClass ex:pokemon ;
     sh:property [
         sh:path ex:isType ;
         sh:minCount 1 ;
-        sh:maxCount 2 ] ;
+        sh:maxCount 2 ;
+        sh:node sh:TypeShape ;
+        sh:nodekind sh:IRI ] ;
+
     sh:property [
         sh:path ex:evolvesFrom ;
-        sh:maxCount 1 ] .
+        sh:maxCount 1 ;
+        sh:nodekind sh:IRI ;
+        sh:node sh:PokeShape ] .
+
+#TypeShape for ex:type properties
+sh:TypeShape a sh:NodeShape;
+    sh:targetClass ex:type ;
+    sh:property [
+        sh:path ex:weakAgainst ;
+        sh:nodekind sh:IRI ;
+        sh:node sh:TypeShape ] ;
+
+    sh:property [
+        sh:path ex:strongAgainst ;
+        sh:nodekind sh:IRI ;
+        sh:node sh:TypeShape ] ;
+
+    sh:property [
+        sh:path ex:immuneTo ;
+        sh:nodekind sh:IRI ;
+        sh:node sh:TypeShape ] ;
+
+    sh:property [
+        sh:path ex:notVeryEffectiveTo ;
+        sh:nodekind sh:IRI ;
+        sh:node sh:TypeShape ] .

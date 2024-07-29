@@ -97,6 +97,14 @@ ex:poison rdfs:subClassOf ex:type ; ex:weakAgainst ex:ground , ex:psychic .
 ex:poison ex:strongAgainst ex:fairy , ex:grass .
 ex:poison ex:notVeryEffectiveTo ex:poison , ex:ground , ex:rock , ex:ghost .
 
-ex:Bulbasaur a ex:pokemon ; ex:isType ex:grass .
-ex:Ivysaur a ex:pokemon ; ex:evolvesFrom ex:Bulbasaur ; ex:isType ex:grass .
-ex:Venusaur a ex:pokemon ; ex:evolvesFrom ex:Ivysaur ; ex:isType ex:grass , ex:poison .
+ex:bulbasaur a ex:pokemon ; ex:isType ex:grass .
+ex:ivysaur a ex:pokemon ; ex:evolvesFrom ex:bulbasaur ; ex:isType ex:grass .
+ex:venusaur a ex:pokemon ; ex:evolvesFrom ex:ivysaur ; ex:isType ex:grass , ex:poison .
+
+ex:charmander a ex:pokemon ; ex:isType ex:fire .
+ex:charmeleon a ex:pokemon ; ex:evolvesFrom ex:charmander ; ex:isType ex:fire .
+ex:charizard a ex:pokemon ; ex:evolvesFrom ex:charmeleon ; ex:isType ex:fire , ex:flying .
+
+ex:squirtle a ex:pokemon ; ex:isType ex:water .
+ex:wartortle a ex:pokemon ; ex:evolvesFrom ex:squirtle ; ex:isType ex:water .
+ex:blastoise a ex:pokemon ; ex:evolvesFrom ex:wartortle ; ex:isType ex:water .

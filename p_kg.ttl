@@ -108,3 +108,7 @@ ex:charizard a ex:pokemon ; ex:evolvesFrom ex:charmeleon ; ex:isType ex:fire , e
 ex:squirtle a ex:pokemon ; ex:isType ex:water .
 ex:wartortle a ex:pokemon ; ex:evolvesFrom ex:squirtle ; ex:isType ex:water .
 ex:blastoise a ex:pokemon ; ex:evolvesFrom ex:wartortle ; ex:isType ex:water .
+
+ex:caterpie a ex:pokemon ; ex:isType ex:bug .
+ex:metapod a ex:pokemon ; ex:evolvesFrom ex:caterpie ; ex:isType ex:bug .
+ex:butterfree a ex:pokemon ; ex:evolvesFrom ex:metapod ; ex:isType ex:bug , ex:flying .

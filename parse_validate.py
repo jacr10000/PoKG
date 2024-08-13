@@ -9,5 +9,5 @@ shacl = Graph()
 shacl.namespace_manager.bind('xsd', 'http://www.w3.org/2001/XMLSchema#')
 shacl.parse('p_shacl.shacl')
 
-r = validate(graph, shacl_graph=shacl, inference='rdfs', meta_shacl=False, debug=False)
+r = validate(graph, shacl_graph=shacl, inference='rdfs')
 conforms, results_graph, results_text = r

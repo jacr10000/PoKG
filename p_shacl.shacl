@@ -24,6 +24,7 @@ sh:PokeShape a sh:NodeShape;
         sh:maxCount 1 ;
         sh:nodekind sh:IRI ] .
 
+#Watch out for same-node recursion
 #TypeShape for ex:type properties
 sh:TypeShape a sh:NodeShape;
     sh:targetClass ex:type ;

@@ -44,7 +44,7 @@ ex:fighting ex:strongAgainst ex:normal , ex:dark , ex:ice , ex:rock , ex:steel .
 ex:fighting ex:notVeryEffectiveTo ex:flying , ex:poison , ex:bug , ex:psychic , ex:fairy .
 
 ex:ghost rdfs:subClassOf ex:type ; ex:weakAgainst ex:dark , ex:ghost .
-ex:ghost es:strongAgainst ex:ghost , ex:psychic .
+ex:ghost ex:strongAgainst ex:ghost , ex:psychic .
 ex:ghost ex:immuneTo ex:normal , ex:fighting .
 ex:ghost ex:notVeryEffectiveTo ex:dark .
 

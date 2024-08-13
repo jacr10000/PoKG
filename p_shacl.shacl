@@ -22,28 +22,23 @@ sh:PokeShape a sh:NodeShape;
     sh:property [
         sh:path ex:evolvesFrom ;
         sh:maxCount 1 ;
-        sh:nodekind sh:IRI ;
-        sh:node sh:PokeShape ] .
+        sh:nodekind sh:IRI ] .
 
 #TypeShape for ex:type properties
 sh:TypeShape a sh:NodeShape;
     sh:targetClass ex:type ;
     sh:property [
         sh:path ex:weakAgainst ;
-        sh:nodekind sh:IRI ;
-        sh:node sh:TypeShape ] ;
+        sh:nodekind sh:IRI ] ;
 
     sh:property [
         sh:path ex:strongAgainst ;
-        sh:nodekind sh:IRI ;
-        sh:node sh:TypeShape ] ;
+        sh:nodekind sh:IRI ] ;
 
     sh:property [
         sh:path ex:immuneTo ;
-        sh:nodekind sh:IRI ;
-        sh:node sh:TypeShape ] ;
+        sh:nodekind sh:IRI ] ;
 
     sh:property [
         sh:path ex:notVeryEffectiveTo ;
-        sh:nodekind sh:IRI ;
-        sh:node sh:TypeShape ] .
+        sh:nodekind sh:IRI ] .

@@ -97,6 +97,7 @@ ex:poison rdfs:subClassOf ex:type ; ex:weakAgainst ex:ground , ex:psychic .
 ex:poison ex:strongAgainst ex:fairy , ex:grass .
 ex:poison ex:notVeryEffectiveTo ex:poison , ex:ground , ex:rock , ex:ghost .
 
+#Instances
 ex:bulbasaur a ex:pokemon ; ex:isType ex:grass .
 ex:ivysaur a ex:pokemon ; ex:evolvesFrom ex:bulbasaur ; ex:isType ex:grass .
 ex:venusaur a ex:pokemon ; ex:evolvesFrom ex:ivysaur ; ex:isType ex:grass , ex:poison .
@@ -112,3 +113,56 @@ ex:blastoise a ex:pokemon ; ex:evolvesFrom ex:wartortle ; ex:isType ex:water .
 ex:caterpie a ex:pokemon ; ex:isType ex:bug .
 ex:metapod a ex:pokemon ; ex:evolvesFrom ex:caterpie ; ex:isType ex:bug .
 ex:butterfree a ex:pokemon ; ex:evolvesFrom ex:metapod ; ex:isType ex:bug , ex:flying .
+
+ex:weedle a ex:pokemon ; ex:isType ex:bug , ex:poison .
+ex:kakuna a ex:pokemon ; ex:evolvesFrom ex:weedle ; ex:isType ex:bug , ex:poison .
+ex:beedrill a ex:pokemon ; ex:evolvesFrom ex:kakuna ; ex:isType ex:bug , ex:poison .
+
+ex:pidgey a ex:pokemon ; ex:isType ex:normal , ex:flying .
+ex:pidgeotto a ex:pokemon ; ex:evolvesFrom ex:pidgey ; ex:isType ex:normal , ex:flying .
+ex:pidgeot a ex:pokemon ; ex:evolvesFrom ex:pidgeotto ; ex:isType ex:normal , ex:flying .
+
+ex:rattata a ex:pokemon ; ex:isType ex:normal .
+ex:raticate a ex:pokemon ; ex:evolvesFrom ex:rattata ; ex:isType ex:normal .
+
+ex:spearow a ex:pokemon ; ex:isType ex:normal , ex:flying .
+ex:fearow a ex:pokemon ; ex:evolvesFrom ex:spearow ; ex:isType ex:normal , ex:flying .
+
+ex:ekans a ex:pokemon ; ex:isType ex:poison .
+ex:arbok a ex:pokemon ; ex:evolvesFrom ex:ekans ; ex:isType ex:poison .
+
+ex:pikachu a ex:pokemon ; ex:isType ex:electric .
+ex:raichu a ex:pokemon ; ex:evolvesFrom ex:pikachu ; ex:isType ex:electric .
+
+ex:sandshrew a ex:pokemon ; ex:isType ex:ground .
+ex:sandslash a ex:pokemon ; ex:evolvesFrom ex:sandshrew ; ex:isType ex:ground .
+
+ex:nidoran_female a ex:pokemon ; ex:isType ex:poison .
+ex:nidorina a ex:pokemon ; ex:evolvesFrom ex:nidoran_female ; ex:isType ex:poison .
+ex:nidoqueen a ex:pokemon ; ex:evolvesFrom ex:nidorina ; ex:isType ex:poison , ex:ground .
+
+ex:nidoran_male a ex:pokemon ; ex:isType ex:poison .
+ex:nidorino a ex:pokemon ; ex:evolvesFrom ex:nidoran_male ; ex:isType ex:poison .
+ex:nidoking a ex:pokemon ; ex:evolvesFrom ex:nidorino ; ex:isType ex:poison , ex:ground .
+
+ex:clefairy a ex:pokemon ; ex:isType ex:fairy .
+ex:clefable a ex:pokemon ; ex:evolvesFrom ex:clefairy ; ex:isType ex:fairy .
+
+ex:vulpix a ex:pokemon ; ex:isType ex:fire .
+ex:ninetales a ex:pokemon ; ex:evolvesFrom ex:vulpix ; ex:isType ex:fire .
+
+ex:jigglypuff a ex:pokemon ; ex:isType ex:normal , ex:fairy .
+ex:wigglytuff a ex:pokemon ; ex:evolvesFrom ex:jigglypuff ; ex:isType ex:normal , ex:fairy .
+
+ex:zubat a ex:pokemon ; ex:isType ex:poison , ex:flying .
+ex:golbat a ex:pokemon ; ex:evolvesFrom ex:zubat ; ex:isType ex:poison , ex:flying .
+
+ex:oddish a ex:pokemon ; ex:isType ex:grass , ex:poison .
+ex:gloom a ex:pokemon ; ex:evolvesFrom ex:oddish ; ex:isType ex:grass , ex:poison .
+ex:vileplume a ex:pokemon ; ex:evolvesFrom ex:gloom ; ex:isType ex:grass , ex:poison .
+
+ex:paras a ex:pokemon ; ex:isType ex:grass , ex:bug .
+ex:parasect a ex:pokemon ; ex:evolvesFrom ex:paras ; ex:isType ex:grass , ex:poison .
+
+ex:venonat a ex:pokemon ; ex:isType ex:bug , ex:poison .
+ex:venomoth a ex:pokemon ; ex:evolvesFrom ex:venonat ; ex:isType ex:bug , ex:poison .

@@ -17,12 +17,14 @@ sh:PokeShape a sh:NodeShape;
         sh:minCount 1 ;
         sh:maxCount 2 ;
         sh:node sh:TypeShape ;
-        sh:nodekind sh:IRI ] ;
+        sh:nodekind sh:IRI ;
+        sh:class ex:type] ;
 
     sh:property [
         sh:path ex:evolvesFrom ;
         sh:maxCount 1 ;
-        sh:nodekind sh:IRI ] .
+        sh:nodekind sh:IRI ;
+        sh:class ex:pokemon] .
 
 #Watch out for same-node recursion
 #TypeShape for ex:type properties
@@ -30,16 +32,20 @@ sh:TypeShape a sh:NodeShape;
     sh:targetClass ex:type ;
     sh:property [
         sh:path ex:weakAgainst ;
-        sh:nodekind sh:IRI ] ;
+        sh:nodekind sh:IRI ;
+        sh:class ex:type ] ;
 
     sh:property [
         sh:path ex:strongAgainst ;
-        sh:nodekind sh:IRI ] ;
+        sh:nodekind sh:IRI ;
+        sh:class ex:type ] ;
 
     sh:property [
         sh:path ex:immuneTo ;
-        sh:nodekind sh:IRI ] ;
+        sh:nodekind sh:IRI ;
+        sh:class ex:type ] ;
 
     sh:property [
         sh:path ex:notVeryEffectiveTo ;
-        sh:nodekind sh:IRI ] .
+        sh:nodekind sh:IRI ;
+        sh:class ex:type ] .

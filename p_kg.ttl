@@ -166,3 +166,50 @@ ex:parasect a ex:pokemon ; ex:evolvesFrom ex:paras ; ex:isType ex:grass , ex:poi
 
 ex:venonat a ex:pokemon ; ex:isType ex:bug , ex:poison .
 ex:venomoth a ex:pokemon ; ex:evolvesFrom ex:venonat ; ex:isType ex:bug , ex:poison .
+
+ex:diglett a ex:pokemon ; ex:isType ex:ground .
+ex:dugtrio a ex:pokemon ; ex:evolvesFrom ex:diglett ; ex:isType ex:ground .
+
+ex:meowth a ex:pokemon ; ex:isType ex:normal .
+ex:persian a ex:pokemon ; ex:evolvesFrom ex:meowth ; ex:isType ex:normal .
+
+ex:psyduck a ex:pokemon ; ex:isType ex:water .
+ex:golduck a ex:pokemon ; ex:evolvesFrom ex:psyduck ; ex:isType ex:water .
+
+ex:mankey a ex:pokemon ; ex:isType ex:fighting .
+ex:primeape a ex:pokemon ; ex:evolvesFrom ex:mankey ; ex:isType ex:fighting .
+
+ex:growlithe a ex:pokemon ; ex:isType ex:fire .
+ex:arcanine a ex:pokemon ; ex:evolvesFrom ex:growlithe ; ex:isType ex:fire .
+
+ex:poliwag a ex:pokemon ; ex:isType ex:water .
+ex:poliwhirl a ex:pokemon ; ex:evolvesFrom ex:poliwag ; ex:isType ex:water .
+ex:poliwrath a ex:pokemon ; ex:evolvesFrom ex:poliwhirl ; ex:isType ex:water .
+
+ex:abra a ex:pokemon ; ex:isType ex:psychic .
+ex:kadabra a ex:pokemon ; ex:evolvesFrom ex:abra ; ex:isType ex:psychic .
+ex:alakazam a ex:pokemon ; ex:evolvesFrom ex:kadabra ; ex:isType ex:psychic .
+
+ex:machop a ex:pokemon ; ex:isType ex:fighting .
+ex:machoke a ex:pokemon ; ex:evolvesFrom ex:machop ; ex:isType ex:fighting .
+ex:machamp a ex:pokemon ; ex:evolvesFrom ex:machoke ; ex:isType ex:fighting .
+
+ex:bellsprout a ex:pokemon ; ex:isType ex:grass , ex:poison .
+ex:weepinbell a ex:pokemon ; ex:evolvesFrom ex:bellsprout ; ex:isType ex:grass , ex:poison .
+ex:victreebel a ex:pokemon ; ex:evolvesFrom ex:weepinbell ; ex:isType ex:grass , ex:poison .
+
+ex:tentacool a ex:pokemon ; ex:isType ex:water , ex:poison .
+ex:tentacruel a ex:pokemon ; ex:evolvesFrom ex:tentacool ; ex:isType ex:water , ex:poison .
+
+ex:geodude a ex:pokemon ; ex:isType ex:rock , ex:ground .
+ex:graveler a ex:pokemon ; ex:evolvesFrom ex:geodude ; ex:isType ex:rock , ex:ground .
+ex:golem a ex:pokemon ; ex:evolvesFrom ex:graveler ; ex:isType ex:rock , ex:ground .
+
+ex:ponyta a ex:pokemon ; ex:isType ex:fire .
+ex:rapidash a ex:pokemon ; ex:evolvesFrom ex:ponyta ; ex:isType ex:fire .
+
+ex:slowpoke a ex:pokemon ; ex:isType ex:water , ex:psychic .
+ex:slowbro a ex:pokemon ; ex:evolvesFrom ex:slowpoke ; ex:isType ex:water , ex:psychic .
+
+ex:magnemite a ex:pokemon ; ex:isType ex:electric , ex:steel .
+ex:magneton a ex:pokemon ; ex:evolvesFrom ex:magnemite ; ex:isType ex:electric , ex:steel .

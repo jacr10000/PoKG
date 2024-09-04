@@ -18,13 +18,21 @@ sh:PokeShape a sh:NodeShape;
         sh:maxCount 2 ;
         sh:node sh:TypeShape ;
         sh:nodekind sh:IRI ;
-        sh:class ex:type] ;
+        sh:class ex:type ] ;
 
     sh:property [
         sh:path ex:evolvesFrom ;
         sh:maxCount 1 ;
         sh:nodekind sh:IRI ;
-        sh:class ex:pokemon] .
+        sh:class ex:pokemon ] ;
+    
+    sh:property [
+        sh:path ex:pokedexNum ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:maxInclusive 151;
+        sh:datatype xsd:integer ] .
 
 #Watch out for same-node recursion
 #TypeShape for ex:type properties

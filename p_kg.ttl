@@ -19,308 +19,308 @@ ex:strongAgainst a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type ; owl
 ex:immuneTo a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type .
 ex:notVeryEffectiveTo a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type .
 
-ex:normal rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting .
+ex:normal rdfs:subClassOf ex:type ; rdfs:label "normal" ; ex:weakAgainst ex:fighting .
 ex:normal ex:immuneTo ex:ghost .
 ex:normal ex:notVeryEffectiveTo ex:rock , ex:steel .
 
-ex:fire rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:rock, ex:ground .
+ex:fire rdfs:subClassOf ex:type ; rdfs:label "fire" ; ex:weakAgainst ex:water , ex:rock, ex:ground .
 ex:fire ex:strongAgainst ex:grass , ex:bug , ex:steel , ex:ice .
 ex:fire ex:notVeryEffectiveTo ex:rock , ex:fire , ex:water , ex:dragon .
 
-ex:water rdfs:subClassOf ex:type ; ex:weakAgainst ex:grass , ex:electric .
+ex:water rdfs:subClassOf ex:type ; rdfs:label "water" ; ex:weakAgainst ex:grass , ex:electric .
 ex:water ex:strongAgainst ex:fire , ex:rock , ex:ground .
 ex:water ex:notVeryEffectiveTo ex:water , ex:grass , ex:dragon .
 
-ex:grass rdfs:subClassOf ex:type ; ex:weakAgainst ex:fire , ex:bug , ex:poison , ex:ice , ex:flying .
+ex:grass rdfs:subClassOf ex:type ; rdfs:label "grass" ; ex:weakAgainst ex:fire , ex:bug , ex:poison , ex:ice , ex:flying .
 ex:grass ex:strongAgainst ex:water , ex:rock , ex:ground .
 ex:grass ex:notVeryEffectiveTo ex:flying , ex:poison , ex:bug , ex:fire , ex:steel , ex:grass , ex:dragon .
 
-ex:bug rdfs:subClassOf ex:type ; ex:weakAgainst ex:fire , ex:flying , ex:rock .
+ex:bug rdfs:subClassOf ex:type ; rdfs:label "bug" ; ex:weakAgainst ex:fire , ex:flying , ex:rock .
 ex:bug ex:strongAgainst ex:grass , ex:psychic , ex:dark .
 ex:bug ex:notVeryEffectiveTo ex:fighting , ex:flying , ex:poison , ex:ghost , ex:steel , ex:fire , ex:fairy .
 
-ex:fighting rdfs:subClassOf ex:type ; ex:weakAgainst ex:psychic , ex:flying , ex:fairy .
+ex:fighting rdfs:subClassOf ex:type ; rdfs:label "fighting" ; ex:weakAgainst ex:psychic , ex:flying , ex:fairy .
 ex:fighting ex:strongAgainst ex:normal , ex:dark , ex:ice , ex:rock , ex:steel .
 ex:fighting ex:notVeryEffectiveTo ex:flying , ex:poison , ex:bug , ex:psychic , ex:fairy .
 
-ex:ghost rdfs:subClassOf ex:type ; ex:weakAgainst ex:dark , ex:ghost .
+ex:ghost rdfs:subClassOf ex:type ; rdfs:label "ghost" ; ex:weakAgainst ex:dark , ex:ghost .
 ex:ghost ex:strongAgainst ex:ghost , ex:psychic .
 ex:ghost ex:immuneTo ex:normal , ex:fighting .
 ex:ghost ex:notVeryEffectiveTo ex:dark .
 
-ex:dark rdfs:subClassOf ex:type ; ex:weakAgainst ex:bug , ex:fighting, ex:fairy .
+ex:dark rdfs:subClassOf ex:type ; rdfs:label "dark" ; ex:weakAgainst ex:bug , ex:fighting, ex:fairy .
 ex:dark ex:strongAgainst ex:ghost , ex:psychic .
 ex:dark ex:immuneTo ex:psychic .
 ex:dark ex:notVeryEffectiveTo ex:fighting , ex:dark , ex:fairy .
 
-ex:psychic rdfs:subClassOf ex:type ; ex:weakAgainst ex:bug , ex:ghost, ex:dark .
+ex:psychic rdfs:subClassOf ex:type ; rdfs:label "psychic" ; ex:weakAgainst ex:bug , ex:ghost, ex:dark .
 ex:psychic ex:strongAgainst ex:fighting , ex:poison .
 ex:psychic ex:notVeryEffectiveTo ex:steel , ex:psychic .
 
-ex:flying rdfs:subClassOf ex:type ; ex:weakAgainst ex:electric , ex:ice, ex:rock .
+ex:flying rdfs:subClassOf ex:type ; rdfs:label "flying" ; ex:weakAgainst ex:electric , ex:ice, ex:rock .
 ex:flying ex:strongAgainst ex:bug , ex:fighting , ex:grass .
 ex:flying ex:immuneTo ex:ground .
 ex:flying ex:notVeryEffectiveTo ex:rock , ex:electric , ex:steel .
 
-ex:ice rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting , ex:fire, ex:rock , ex:steel .
+ex:ice rdfs:subClassOf ex:type ; rdfs:label "ice" ; ex:weakAgainst ex:fighting , ex:fire, ex:rock , ex:steel .
 ex:ice ex:strongAgainst ex:dragon , ex:grass , ex:ground , ex:flying .
 ex:ice ex:notVeryEffectiveTo ex:steel , ex:fire , ex:water , ex:ice .
 
-ex:dragon rdfs:subClassOf ex:type ; ex:weakAgainst ex:dragon, ex:ice .
+ex:dragon rdfs:subClassOf ex:type ; rdfs:label "dragon" ; ex:weakAgainst ex:dragon, ex:ice .
 ex:dragon ex:strongAgainst ex:dragon .
 ex:dragon ex:notVeryEffectiveTo ex:steel .
 
-ex:steel rdfs:subClassOf ex:type ; ex:weakAgainst ex:fighting , ex:fire, ex:ground .
+ex:steel rdfs:subClassOf ex:type ; rdfs:label "steel" ; ex:weakAgainst ex:fighting , ex:fire, ex:ground .
 ex:steel ex:strongAgainst ex:fairy , ex:ice , ex:rock .
 ex:steel ex:immuneTo ex:poison .
 ex:steel ex:notVeryEffectiveTo ex:steel , ex:fire , ex:water , ex:electric .
 
-ex:rock rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:grass, ex:ground , ex:fighting , ex:steel .
+ex:rock rdfs:subClassOf ex:type ; rdfs:label "rock" ; ex:weakAgainst ex:water , ex:grass, ex:ground , ex:fighting , ex:steel .
 ex:rock ex:strongAgainst ex:fire , ex:bug , ex:flying , ex:ice .
 ex:rock ex:notVeryEffectiveTo ex:fighting , ex:ground , ex:steel .
 
-ex:ground rdfs:subClassOf ex:type ; ex:weakAgainst ex:water , ex:grass, ex:ice .
+ex:ground rdfs:subClassOf ex:type ; rdfs:label "ground" ; ex:weakAgainst ex:water , ex:grass, ex:ice .
 ex:ground ex:strongAgainst ex:fire , ex:rock , ex:posion , ex:steel , ex:electric .
 ex:ground ex:immuneTo ex:electric .
 ex:ground ex:notVeryEffectiveTo ex:bug , ex:grass .
 
-ex:fairy rdfs:subClassOf ex:type ; ex:weakAgainst ex:poison , ex:steel .
+ex:fairy rdfs:subClassOf ex:type ; rdfs:label "fairy" ; ex:weakAgainst ex:poison , ex:steel .
 ex:fairy ex:strongAgainst ex:dragon , ex:dark , ex:fighting .
 ex:fairy ex:immuneTo ex:dragon .
 ex:fairy ex:notVeryEffectiveTo ex:poison , ex:steel , ex:fire .
 
-ex:electric rdfs:subClassOf ex:type ; ex:weakAgainst ex:ground .
+ex:electric rdfs:subClassOf ex:type ; rdfs:label "electric" ; ex:weakAgainst ex:ground .
 ex:electric ex:strongAgainst ex:water , ex:flying .
 ex:electric ex:notVeryEffectiveTo ex:grass , ex:electric , ex:dragon .
 
-ex:poison rdfs:subClassOf ex:type ; ex:weakAgainst ex:ground , ex:psychic .
+ex:poison rdfs:subClassOf ex:type ; rdfs:label "poison" ; ex:weakAgainst ex:ground , ex:psychic .
 ex:poison ex:strongAgainst ex:fairy , ex:grass .
 ex:poison ex:notVeryEffectiveTo ex:poison , ex:ground , ex:rock , ex:ghost .
 
 #Instances
-ex:bulbasaur a ex:pokemon ; ex:pokedexNum 1 ; ex:isType ex:grass , ex:poison .
-ex:ivysaur a ex:pokemon ; ex:pokedexNum 2 ; ex:evolvesFrom ex:bulbasaur ; ex:isType ex:grass , ex:poison .
-ex:venusaur a ex:pokemon ; ex:pokedexNum 3 ; ex:evolvesFrom ex:ivysaur ; ex:isType ex:grass , ex:poison .
+ex:bulbasaur a ex:pokemon ; rdfs:label "Bulbasaur" ; ex:pokedexNum 1 ; ex:isType ex:grass , ex:poison .
+ex:ivysaur a ex:pokemon ; rdfs:label "Ivysaur" ; ex:pokedexNum 2 ; ex:evolvesFrom ex:bulbasaur ; ex:isType ex:grass , ex:poison .
+ex:venusaur a ex:pokemon ; rdfs:label "Venusaur" ; ex:pokedexNum 3 ; ex:evolvesFrom ex:ivysaur ; ex:isType ex:grass , ex:poison .
 
-ex:charmander a ex:pokemon ; ex:pokedexNum 4 ; ex:isType ex:fire .
-ex:charmeleon a ex:pokemon ; ex:pokedexNum 5 ; ex:evolvesFrom ex:charmander ; ex:isType ex:fire .
-ex:charizard a ex:pokemon ; ex:pokedexNum 6 ; ex:evolvesFrom ex:charmeleon ; ex:isType ex:fire , ex:flying .
+ex:charmander a ex:pokemon ; rdfs:label "Charmander" ; ex:pokedexNum 4 ; ex:isType ex:fire .
+ex:charmeleon a ex:pokemon ; rdfs:label "Charmeleon" ; ex:pokedexNum 5 ; ex:evolvesFrom ex:charmander ; ex:isType ex:fire .
+ex:charizard a ex:pokemon ; rdfs:label "Charizard" ; ex:pokedexNum 6 ; ex:evolvesFrom ex:charmeleon ; ex:isType ex:fire , ex:flying .
 
-ex:squirtle a ex:pokemon ; ex:pokedexNum 7 ; ex:isType ex:water .
-ex:wartortle a ex:pokemon ; ex:pokedexNum 8 ; ex:evolvesFrom ex:squirtle ; ex:isType ex:water .
-ex:blastoise a ex:pokemon ; ex:pokedexNum 9 ; ex:evolvesFrom ex:wartortle ; ex:isType ex:water .
+ex:squirtle a ex:pokemon ; rdfs:label "Squirtle" ; ex:pokedexNum 7 ; ex:isType ex:water .
+ex:wartortle a ex:pokemon ; rdfs:label "Wartortle" ; ex:pokedexNum 8 ; ex:evolvesFrom ex:squirtle ; ex:isType ex:water .
+ex:blastoise a ex:pokemon ; rdfs:label "Blastoise" ; ex:pokedexNum 9 ; ex:evolvesFrom ex:wartortle ; ex:isType ex:water .
 
-ex:caterpie a ex:pokemon ; ex:pokedexNum 10 ; ex:isType ex:bug .
-ex:metapod a ex:pokemon ; ex:pokedexNum 11 ; ex:evolvesFrom ex:caterpie ; ex:isType ex:bug .
-ex:butterfree a ex:pokemon ; ex:pokedexNum 12 ; ex:evolvesFrom ex:metapod ; ex:isType ex:bug , ex:flying .
+ex:caterpie a ex:pokemon ; rdfs:label "Caterpie" ; ex:pokedexNum 10 ; ex:isType ex:bug .
+ex:metapod a ex:pokemon ; rdfs:label "Metapod" ; ex:pokedexNum 11 ; ex:evolvesFrom ex:caterpie ; ex:isType ex:bug .
+ex:butterfree a ex:pokemon ; rdfs:label "Butterfree" ; ex:pokedexNum 12 ; ex:evolvesFrom ex:metapod ; ex:isType ex:bug , ex:flying .
 
-ex:weedle a ex:pokemon ; ex:pokedexNum 13 ; ex:isType ex:bug , ex:poison .
-ex:kakuna a ex:pokemon ; ex:pokedexNum 14 ; ex:evolvesFrom ex:weedle ; ex:isType ex:bug , ex:poison .
-ex:beedrill a ex:pokemon ; ex:pokedexNum 15 ; ex:evolvesFrom ex:kakuna ; ex:isType ex:bug , ex:poison .
+ex:weedle a ex:pokemon ; rdfs:label "Weedle" ; ex:pokedexNum 13 ; ex:isType ex:bug , ex:poison .
+ex:kakuna a ex:pokemon ; rdfs:label "Kakuna" ; ex:pokedexNum 14 ; ex:evolvesFrom ex:weedle ; ex:isType ex:bug , ex:poison .
+ex:beedrill a ex:pokemon ; rdfs:label "Beedrill" ; ex:pokedexNum 15 ; ex:evolvesFrom ex:kakuna ; ex:isType ex:bug , ex:poison .
 
-ex:pidgey a ex:pokemon ; ex:pokedexNum 16 ; ex:isType ex:normal , ex:flying .
-ex:pidgeotto a ex:pokemon ; ex:pokedexNum 17 ; ex:evolvesFrom ex:pidgey ; ex:isType ex:normal , ex:flying .
-ex:pidgeot a ex:pokemon ; ex:pokedexNum 18 ; ex:evolvesFrom ex:pidgeotto ; ex:isType ex:normal , ex:flying .
+ex:pidgey a ex:pokemon ; rdfs:label "Pidgey" ; ex:pokedexNum 16 ; ex:isType ex:normal , ex:flying .
+ex:pidgeotto a ex:pokemon ; rdfs:label "Pidgeotto" ; ex:pokedexNum 17 ; ex:evolvesFrom ex:pidgey ; ex:isType ex:normal , ex:flying .
+ex:pidgeot a ex:pokemon ; rdfs:label "Pidgeot" ; ex:pokedexNum 18 ; ex:evolvesFrom ex:pidgeotto ; ex:isType ex:normal , ex:flying .
 
-ex:rattata a ex:pokemon ; ex:pokedexNum 19 ; ex:isType ex:normal .
-ex:raticate a ex:pokemon ; ex:pokedexNum 20 ; ex:evolvesFrom ex:rattata ; ex:isType ex:normal .
+ex:rattata a ex:pokemon ; rdfs:label "Rattata" ; ex:pokedexNum 19 ; ex:isType ex:normal .
+ex:raticate a ex:pokemon ; rdfs:label "Raticate" ; ex:pokedexNum 20 ; ex:evolvesFrom ex:rattata ; ex:isType ex:normal .
 
-ex:spearow a ex:pokemon ; ex:pokedexNum 21 ; ex:isType ex:normal , ex:flying .
-ex:fearow a ex:pokemon ; ex:pokedexNum 22 ; ex:evolvesFrom ex:spearow ; ex:isType ex:normal , ex:flying .
+ex:spearow a ex:pokemon ; rdfs:label "Spearow" ; ex:pokedexNum 21 ; ex:isType ex:normal , ex:flying .
+ex:fearow a ex:pokemon ; rdfs:label "Fearow" ; ex:pokedexNum 22 ; ex:evolvesFrom ex:spearow ; ex:isType ex:normal , ex:flying .
 
-ex:ekans a ex:pokemon ; ex:pokedexNum 23 ; ex:isType ex:poison .
-ex:arbok a ex:pokemon ; ex:pokedexNum 24 ; ex:evolvesFrom ex:ekans ; ex:isType ex:poison .
+ex:ekans a ex:pokemon ; rdfs:label "Ekans" ; ex:pokedexNum 23 ; ex:isType ex:poison .
+ex:arbok a ex:pokemon ; rdfs:label "Arbok" ; ex:pokedexNum 24 ; ex:evolvesFrom ex:ekans ; ex:isType ex:poison .
 
-ex:pikachu a ex:pokemon ; ex:pokedexNum 25 ; ex:isType ex:electric .
-ex:raichu a ex:pokemon ; ex:pokedexNum 26 ; ex:evolvesFrom ex:pikachu ; ex:isType ex:electric .
+ex:pikachu a ex:pokemon ; rdfs:label "Pikachu" ; ex:pokedexNum 25 ; ex:isType ex:electric .
+ex:raichu a ex:pokemon ; rdfs:label "Raichu" ; ex:pokedexNum 26 ; ex:evolvesFrom ex:pikachu ; ex:isType ex:electric .
 
-ex:sandshrew a ex:pokemon ; ex:pokedexNum 27 ; ex:isType ex:ground .
-ex:sandslash a ex:pokemon ; ex:pokedexNum 28 ; ex:evolvesFrom ex:sandshrew ; ex:isType ex:ground .
+ex:sandshrew a ex:pokemon ; rdfs:label "Sandshrew" ; ex:pokedexNum 27 ; ex:isType ex:ground .
+ex:sandslash a ex:pokemon ; rdfs:label "Sandslash" ; ex:pokedexNum 28 ; ex:evolvesFrom ex:sandshrew ; ex:isType ex:ground .
 
-ex:nidoran_f a ex:pokemon ; ex:pokedexNum 29 ; ex:isType ex:poison .
-ex:nidorina a ex:pokemon ; ex:pokedexNum 30 ; ex:evolvesFrom ex:nidoran_f ; ex:isType ex:poison .
-ex:nidoqueen a ex:pokemon ; ex:pokedexNum 31 ; ex:evolvesFrom ex:nidorina ; ex:isType ex:poison , ex:ground .
+ex:nidoran_f a ex:pokemon ; rdfs:label "Nidoran_female" ; ex:pokedexNum 29 ; ex:isType ex:poison .
+ex:nidorina a ex:pokemon ; rdfs:label "Nidorina" ; ex:pokedexNum 30 ; ex:evolvesFrom ex:nidoran_f ; ex:isType ex:poison .
+ex:nidoqueen a ex:pokemon ; rdfs:label "Nidoqueen" ; ex:pokedexNum 31 ; ex:evolvesFrom ex:nidorina ; ex:isType ex:poison , ex:ground .
 
-ex:nidoran_m a ex:pokemon ; ex:pokedexNum 32 ; ex:isType ex:poison .
-ex:nidorino a ex:pokemon ; ex:pokedexNum 33 ; ex:evolvesFrom ex:nidoran_m ; ex:isType ex:poison .
-ex:nidoking a ex:pokemon ; ex:pokedexNum 34 ; ex:evolvesFrom ex:nidorino ; ex:isType ex:poison , ex:ground .
+ex:nidoran_m a ex:pokemon ; rdfs:label "Nidoran_male" ; ex:pokedexNum 32 ; ex:isType ex:poison .
+ex:nidorino a ex:pokemon ; rdfs:label "Nidorino" ; ex:pokedexNum 33 ; ex:evolvesFrom ex:nidoran_m ; ex:isType ex:poison .
+ex:nidoking a ex:pokemon ; rdfs:label "Nidoking" ; ex:pokedexNum 34 ; ex:evolvesFrom ex:nidorino ; ex:isType ex:poison , ex:ground .
 
-ex:clefairy a ex:pokemon ; ex:pokedexNum 35 ; ex:isType ex:fairy .
-ex:clefable a ex:pokemon ; ex:pokedexNum 36 ; ex:evolvesFrom ex:clefairy ; ex:isType ex:fairy .
+ex:clefairy a ex:pokemon ; rdfs:label "Clefairy" ; ex:pokedexNum 35 ; ex:isType ex:fairy .
+ex:clefable a ex:pokemon ; rdfs:label "Clefable" ; ex:pokedexNum 36 ; ex:evolvesFrom ex:clefairy ; ex:isType ex:fairy .
 
-ex:vulpix a ex:pokemon ; ex:pokedexNum 37 ; ex:isType ex:fire .
-ex:ninetales a ex:pokemon ; ex:pokedexNum 38 ; ex:evolvesFrom ex:vulpix ; ex:isType ex:fire .
+ex:vulpix a ex:pokemon ; rdfs:label "Vulpix" ; ex:pokedexNum 37 ; ex:isType ex:fire .
+ex:ninetales a ex:pokemon ; rdfs:label "Ninetales" ; ex:pokedexNum 38 ; ex:evolvesFrom ex:vulpix ; ex:isType ex:fire .
 
-ex:jigglypuff a ex:pokemon ; ex:pokedexNum 39 ; ex:isType ex:normal , ex:fairy .
-ex:wigglytuff a ex:pokemon ; ex:pokedexNum 40 ; ex:evolvesFrom ex:jigglypuff ; ex:isType ex:normal , ex:fairy .
+ex:jigglypuff a ex:pokemon ; rdfs:label "Jigglypuff" ; ex:pokedexNum 39 ; ex:isType ex:normal , ex:fairy .
+ex:wigglytuff a ex:pokemon ; rdfs:label "Wigglytuff" ; ex:pokedexNum 40 ; ex:evolvesFrom ex:jigglypuff ; ex:isType ex:normal , ex:fairy .
 
-ex:zubat a ex:pokemon ; ex:pokedexNum 41 ; ex:isType ex:poison , ex:flying .
-ex:golbat a ex:pokemon ; ex:pokedexNum 42 ; ex:evolvesFrom ex:zubat ; ex:isType ex:poison , ex:flying .
+ex:zubat a ex:pokemon ; rdfs:label "Zubat" ; ex:pokedexNum 41 ; ex:isType ex:poison , ex:flying .
+ex:golbat a ex:pokemon ; rdfs:label "Golbat" ; ex:pokedexNum 42 ; ex:evolvesFrom ex:zubat ; ex:isType ex:poison , ex:flying .
 
-ex:oddish a ex:pokemon ; ex:pokedexNum 43 ; ex:isType ex:grass , ex:poison .
-ex:gloom a ex:pokemon ; ex:pokedexNum 44 ; ex:evolvesFrom ex:oddish ; ex:isType ex:grass , ex:poison .
-ex:vileplume a ex:pokemon ; ex:pokedexNum 45 ; ex:evolvesFrom ex:gloom ; ex:isType ex:grass , ex:poison .
+ex:oddish a ex:pokemon ; rdfs:label "Oddish" ; ex:pokedexNum 43 ; ex:isType ex:grass , ex:poison .
+ex:gloom a ex:pokemon ; rdfs:label "Gloom" ; ex:pokedexNum 44 ; ex:evolvesFrom ex:oddish ; ex:isType ex:grass , ex:poison .
+ex:vileplume a ex:pokemon ; rdfs:label "Vileplume" ; ex:pokedexNum 45 ; ex:evolvesFrom ex:gloom ; ex:isType ex:grass , ex:poison .
 
-ex:paras a ex:pokemon ; ex:pokedexNum 46 ; ex:isType ex:bug , ex:grass .
-ex:parasect a ex:pokemon ; ex:pokedexNum 47 ; ex:evolvesFrom ex:paras ; ex:isType ex:bug , ex:grass .
+ex:paras a ex:pokemon ; rdfs:label "Paras" ; ex:pokedexNum 46 ; ex:isType ex:bug , ex:grass .
+ex:parasect a ex:pokemon ; rdfs:label "Parasect" ; ex:pokedexNum 47 ; ex:evolvesFrom ex:paras ; ex:isType ex:bug , ex:grass .
 
-ex:venonat a ex:pokemon ; ex:pokedexNum 48 ; ex:isType ex:bug , ex:poison .
-ex:venomoth a ex:pokemon ; ex:pokedexNum 49 ; ex:evolvesFrom ex:venonat ; ex:isType ex:bug , ex:poison .
+ex:venonat a ex:pokemon ; rdfs:label "Venonat" ; ex:pokedexNum 48 ; ex:isType ex:bug , ex:poison .
+ex:venomoth a ex:pokemon ; rdfs:label "Venomoth" ; ex:pokedexNum 49 ; ex:evolvesFrom ex:venonat ; ex:isType ex:bug , ex:poison .
 
-ex:diglett a ex:pokemon ; ex:pokedexNum 50 ; ex:isType ex:ground .
-ex:dugtrio a ex:pokemon ; ex:pokedexNum 51 ; ex:evolvesFrom ex:diglett ; ex:isType ex:ground .
+ex:diglett a ex:pokemon ; rdfs:label "Diglett" ; ex:pokedexNum 50 ; ex:isType ex:ground .
+ex:dugtrio a ex:pokemon ; rdfs:label "Dugtrio" ; ex:pokedexNum 51 ; ex:evolvesFrom ex:diglett ; ex:isType ex:ground .
 
-ex:meowth a ex:pokemon ; ex:pokedexNum 52 ; ex:isType ex:normal .
-ex:persian a ex:pokemon ; ex:pokedexNum 53 ; ex:evolvesFrom ex:meowth ; ex:isType ex:normal .
+ex:meowth a ex:pokemon ; rdfs:label "Meowth" ; ex:pokedexNum 52 ; ex:isType ex:normal .
+ex:persian a ex:pokemon ; rdfs:label "Persian" ; ex:pokedexNum 53 ; ex:evolvesFrom ex:meowth ; ex:isType ex:normal .
 
-ex:psyduck a ex:pokemon ; ex:pokedexNum 54 ; ex:isType ex:water .
-ex:golduck a ex:pokemon ; ex:pokedexNum 55 ; ex:evolvesFrom ex:psyduck ; ex:isType ex:water .
+ex:psyduck a ex:pokemon ; rdfs:label "Psyduck" ; ex:pokedexNum 54 ; ex:isType ex:water .
+ex:golduck a ex:pokemon ; rdfs:label "Golduck" ; ex:pokedexNum 55 ; ex:evolvesFrom ex:psyduck ; ex:isType ex:water .
 
-ex:mankey a ex:pokemon ; ex:pokedexNum 56 ; ex:isType ex:fighting .
-ex:primeape a ex:pokemon ; ex:pokedexNum 57 ; ex:evolvesFrom ex:mankey ; ex:isType ex:fighting .
+ex:mankey a ex:pokemon ; rdfs:label "Mankey" ; ex:pokedexNum 56 ; ex:isType ex:fighting .
+ex:primeape a ex:pokemon ; rdfs:label "Primeape" ; ex:pokedexNum 57 ; ex:evolvesFrom ex:mankey ; ex:isType ex:fighting .
 
-ex:growlithe a ex:pokemon ; ex:pokedexNum 58 ; ex:isType ex:fire .
-ex:arcanine a ex:pokemon ; ex:pokedexNum 59 ; ex:evolvesFrom ex:growlithe ; ex:isType ex:fire .
+ex:growlithe a ex:pokemon ; rdfs:label "Growlithe" ; ex:pokedexNum 58 ; ex:isType ex:fire .
+ex:arcanine a ex:pokemon ; rdfs:label "Arcanine" ; ex:pokedexNum 59 ; ex:evolvesFrom ex:growlithe ; ex:isType ex:fire .
 
-ex:poliwag a ex:pokemon ; ex:pokedexNum 60 ; ex:isType ex:water .
-ex:poliwhirl a ex:pokemon ; ex:pokedexNum 61 ; ex:evolvesFrom ex:poliwag ; ex:isType ex:water .
-ex:poliwrath a ex:pokemon ; ex:pokedexNum 62 ; ex:evolvesFrom ex:poliwhirl ; ex:isType ex:water , ex:fighting .
+ex:poliwag a ex:pokemon ; rdfs:label "Poliwag" ; ex:pokedexNum 60 ; ex:isType ex:water .
+ex:poliwhirl a ex:pokemon ; rdfs:label "Poliwhirl" ; ex:pokedexNum 61 ; ex:evolvesFrom ex:poliwag ; ex:isType ex:water .
+ex:poliwrath a ex:pokemon ; rdfs:label "Poliwrath" ; ex:pokedexNum 62 ; ex:evolvesFrom ex:poliwhirl ; ex:isType ex:water , ex:fighting .
 
-ex:abra a ex:pokemon ; ex:pokedexNum 63 ; ex:isType ex:psychic .
-ex:kadabra a ex:pokemon ; ex:pokedexNum 64 ; ex:evolvesFrom ex:abra ; ex:isType ex:psychic .
-ex:alakazam a ex:pokemon ; ex:pokedexNum 65 ; ex:evolvesFrom ex:kadabra ; ex:isType ex:psychic .
+ex:abra a ex:pokemon ; rdfs:label "Abra" ; ex:pokedexNum 63 ; ex:isType ex:psychic .
+ex:kadabra a ex:pokemon ; rdfs:label "Kadabra" ; ex:pokedexNum 64 ; ex:evolvesFrom ex:abra ; ex:isType ex:psychic .
+ex:alakazam a ex:pokemon ; rdfs:label "Alakazam" ; ex:pokedexNum 65 ; ex:evolvesFrom ex:kadabra ; ex:isType ex:psychic .
 
-ex:machop a ex:pokemon ; ex:pokedexNum 66 ; ex:isType ex:fighting .
-ex:machoke a ex:pokemon ; ex:pokedexNum 67 ; ex:evolvesFrom ex:machop ; ex:isType ex:fighting .
-ex:machamp a ex:pokemon ; ex:pokedexNum 68 ; ex:evolvesFrom ex:machoke ; ex:isType ex:fighting .
+ex:machop a ex:pokemon ; rdfs:label "Machop" ; ex:pokedexNum 66 ; ex:isType ex:fighting .
+ex:machoke a ex:pokemon ; rdfs:label "Machoke" ; ex:pokedexNum 67 ; ex:evolvesFrom ex:machop ; ex:isType ex:fighting .
+ex:machamp a ex:pokemon ; rdfs:label "Machamp" ; ex:pokedexNum 68 ; ex:evolvesFrom ex:machoke ; ex:isType ex:fighting .
 
-ex:bellsprout a ex:pokemon ; ex:pokedexNum 69 ; ex:isType ex:grass , ex:poison .
-ex:weepinbell a ex:pokemon ; ex:pokedexNum 70 ; ex:evolvesFrom ex:bellsprout ; ex:isType ex:grass , ex:poison .
-ex:victreebel a ex:pokemon ; ex:pokedexNum 71 ; ex:evolvesFrom ex:weepinbell ; ex:isType ex:grass , ex:poison .
+ex:bellsprout a ex:pokemon ; rdfs:label "Bellsprout" ; ex:pokedexNum 69 ; ex:isType ex:grass , ex:poison .
+ex:weepinbell a ex:pokemon ; rdfs:label "Weepinbell" ; ex:pokedexNum 70 ; ex:evolvesFrom ex:bellsprout ; ex:isType ex:grass , ex:poison .
+ex:victreebel a ex:pokemon ; rdfs:label "Victreebel" ; ex:pokedexNum 71 ; ex:evolvesFrom ex:weepinbell ; ex:isType ex:grass , ex:poison .
 
-ex:tentacool a ex:pokemon ; ex:pokedexNum 72 ; ex:isType ex:water , ex:poison .
-ex:tentacruel a ex:pokemon ; ex:pokedexNum 73 ; ex:evolvesFrom ex:tentacool ; ex:isType ex:water , ex:poison .
+ex:tentacool a ex:pokemon ; rdfs:label "Tentacool" ; ex:pokedexNum 72 ; ex:isType ex:water , ex:poison .
+ex:tentacruel a ex:pokemon ; rdfs:label "Tentacruel" ; ex:pokedexNum 73 ; ex:evolvesFrom ex:tentacool ; ex:isType ex:water , ex:poison .
 
-ex:geodude a ex:pokemon ; ex:pokedexNum 74 ; ex:isType ex:rock , ex:ground .
-ex:graveler a ex:pokemon ; ex:pokedexNum 75 ; ex:evolvesFrom ex:geodude ; ex:isType ex:rock , ex:ground .
-ex:golem a ex:pokemon ; ex:pokedexNum 76 ; ex:evolvesFrom ex:graveler ; ex:isType ex:rock , ex:ground .
+ex:geodude a ex:pokemon ; rdfs:label "Geodude" ; ex:pokedexNum 74 ; ex:isType ex:rock , ex:ground .
+ex:graveler a ex:pokemon ; rdfs:label "Graveler" ; ex:pokedexNum 75 ; ex:evolvesFrom ex:geodude ; ex:isType ex:rock , ex:ground .
+ex:golem a ex:pokemon ; rdfs:label "Golem" ; ex:pokedexNum 76 ; ex:evolvesFrom ex:graveler ; ex:isType ex:rock , ex:ground .
 
-ex:ponyta a ex:pokemon ; ex:pokedexNum 77 ; ex:isType ex:fire .
-ex:rapidash a ex:pokemon ; ex:pokedexNum 78 ; ex:evolvesFrom ex:ponyta ; ex:isType ex:fire .
+ex:ponyta a ex:pokemon ; rdfs:label "Ponyta" ; ex:pokedexNum 77 ; ex:isType ex:fire .
+ex:rapidash a ex:pokemon ; rdfs:label "Rapidash" ; ex:pokedexNum 78 ; ex:evolvesFrom ex:ponyta ; ex:isType ex:fire .
 
-ex:slowpoke a ex:pokemon ; ex:pokedexNum 79 ; ex:isType ex:water , ex:psychic .
-ex:slowbro a ex:pokemon ; ex:pokedexNum 80 ; ex:evolvesFrom ex:slowpoke ; ex:isType ex:water , ex:psychic .
+ex:slowpoke a ex:pokemon ; rdfs:label "Slowpoke" ; ex:pokedexNum 79 ; ex:isType ex:water , ex:psychic .
+ex:slowbro a ex:pokemon ; rdfs:label "Slowbro" ; ex:pokedexNum 80 ; ex:evolvesFrom ex:slowpoke ; ex:isType ex:water , ex:psychic .
 
-ex:magnemite a ex:pokemon ; ex:pokedexNum 81 ; ex:isType ex:electric , ex:steel .
-ex:magneton a ex:pokemon ; ex:pokedexNum 82 ; ex:evolvesFrom ex:magnemite ; ex:isType ex:electric , ex:steel .
+ex:magnemite a ex:pokemon ; rdfs:label "Magnemite" ; ex:pokedexNum 81 ; ex:isType ex:electric , ex:steel .
+ex:magneton a ex:pokemon ; rdfs:label "Magneton" ; ex:pokedexNum 82 ; ex:evolvesFrom ex:magnemite ; ex:isType ex:electric , ex:steel .
 
-ex:farfetchd a ex:pokemon ; ex:pokedexNum 83 ; ex:isType ex:normal , ex:flying .
+ex:farfetchd a ex:pokemon ; rdfs:label "Farfetch'd" ; ex:pokedexNum 83 ; ex:isType ex:normal , ex:flying .
 
-ex:doduo a ex:pokemon ; ex:pokedexNum 84 ; ex:isType ex:normal , ex:flying .
-ex:dodrio a ex:pokemon ; ex:pokedexNum 85 ; ex:evolvesFrom ex:doduo ; ex:isType ex:normal , ex:flying .
+ex:doduo a ex:pokemon ; rdfs:label "Doduo" ; ex:pokedexNum 84 ; ex:isType ex:normal , ex:flying .
+ex:dodrio a ex:pokemon ; rdfs:label "Dodrio" ; ex:pokedexNum 85 ; ex:evolvesFrom ex:doduo ; ex:isType ex:normal , ex:flying .
 
-ex:seel a ex:pokemon ; ex:pokedexNum 86 ; ex:isType ex:water .
-ex:dewgong a ex:pokemon ; ex:pokedexNum 87 ; ex:evolvesFrom ex:seel ; ex:isType ex:water , ex:ice .
+ex:seel a ex:pokemon ; rdfs:label "Seel" ; ex:pokedexNum 86 ; ex:isType ex:water .
+ex:dewgong a ex:pokemon ; rdfs:label "Dewgong" ; ex:pokedexNum 87 ; ex:evolvesFrom ex:seel ; ex:isType ex:water , ex:ice .
 
-ex:grimer a ex:pokemon ; ex:pokedexNum 88 ; ex:isType ex:poison .
-ex:muk a ex:pokemon ; ex:pokedexNum 89 ; ex:evolvesFrom ex:grimer ; ex:isType ex:poison .
+ex:grimer a ex:pokemon ; rdfs:label "Grimer" ; ex:pokedexNum 88 ; ex:isType ex:poison .
+ex:muk a ex:pokemon ; rdfs:label "Muk" ; ex:pokedexNum 89 ; ex:evolvesFrom ex:grimer ; ex:isType ex:poison .
 
-ex:shellder a ex:pokemon ; ex:pokedexNum 90 ; ex:isType ex:water .
-ex:cloyster a ex:pokemon ; ex:pokedexNum 91 ; ex:evolvesFrom ex:shellder ; ex:isType ex:water , ex:ice .
+ex:shellder a ex:pokemon ; rdfs:label "Shellder" ; ex:pokedexNum 90 ; ex:isType ex:water .
+ex:cloyster a ex:pokemon ; rdfs:label "Cloyster" ; ex:pokedexNum 91 ; ex:evolvesFrom ex:shellder ; ex:isType ex:water , ex:ice .
 
-ex:gastly a ex:pokemon ; ex:pokedexNum 92 ; ex:isType ex:ghost , ex:poison .
-ex:haunter a ex:pokemon ; ex:pokedexNum 93 ; ex:evolvesFrom ex:gastly ; ex:isType ex:ghost , ex:poison .
-ex:gengar a ex:pokemon ; ex:pokedexNum 94 ; ex:evolvesFrom ex:haunter ; ex:isType ex:ghost , ex:poison .
+ex:gastly a ex:pokemon ; rdfs:label "Gastly" ; ex:pokedexNum 92 ; ex:isType ex:ghost , ex:poison .
+ex:haunter a ex:pokemon ; rdfs:label "Haunter" ; ex:pokedexNum 93 ; ex:evolvesFrom ex:gastly ; ex:isType ex:ghost , ex:poison .
+ex:gengar a ex:pokemon ; rdfs:label "Gengar" ; ex:pokedexNum 94 ; ex:evolvesFrom ex:haunter ; ex:isType ex:ghost , ex:poison .
 
-ex:onix a ex:pokemon ; ex:pokedexNum 95 ; ex:isType ex:rock , ex:ground .
+ex:onix a ex:pokemon ; rdfs:label "Onix" ; ex:pokedexNum 95 ; ex:isType ex:rock , ex:ground .
 
-ex:drowzee a ex:pokemon ; ex:pokedexNum 96 ; ex:isType ex:psychic .
-ex:hypno a ex:pokemon ; ex:pokedexNum 97 ; ex:evolvesFrom ex:drowzee ; ex:isType ex:psychic .
+ex:drowzee a ex:pokemon ; rdfs:label "Drowzee" ; ex:pokedexNum 96 ; ex:isType ex:psychic .
+ex:hypno a ex:pokemon ; rdfs:label "Hypno" ; ex:pokedexNum 97 ; ex:evolvesFrom ex:drowzee ; ex:isType ex:psychic .
 
-ex:krabby a ex:pokemon ; ex:pokedexNum 98 ; ex:isType ex:water .
-ex:kingler a ex:pokemon ; ex:pokedexNum 99 ; ex:evolvesFrom ex:krabby ; ex:isType ex:water .
+ex:krabby a ex:pokemon ; rdfs:label "Krabby" ; ex:pokedexNum 98 ; ex:isType ex:water .
+ex:kingler a ex:pokemon ; rdfs:label "Kingler" ; ex:pokedexNum 99 ; ex:evolvesFrom ex:krabby ; ex:isType ex:water .
 
-ex:voltorb a ex:pokemon ; ex:pokedexNum 100 ; ex:isType ex:electric .
-ex:electrode a ex:pokemon ; ex:pokedexNum 101 ; ex:evolvesFrom ex:voltorb ; ex:isType ex:electric .
+ex:voltorb a ex:pokemon ; rdfs:label "Voltorb" ; ex:pokedexNum 100 ; ex:isType ex:electric .
+ex:electrode a ex:pokemon ; rdfs:label "Electrode" ; ex:pokedexNum 101 ; ex:evolvesFrom ex:voltorb ; ex:isType ex:electric .
 
-ex:exeggcute a ex:pokemon ; ex:pokedexNum 102 ; ex:isType ex:grass , ex:psychic .
-ex:exeggutor a ex:pokemon ; ex:pokedexNum 103 ; ex:evolvesFrom ex:exeggcute ; ex:isType ex:grass , ex:psychic .
+ex:exeggcute a ex:pokemon ; rdfs:label "Exeggcute" ; ex:pokedexNum 102 ; ex:isType ex:grass , ex:psychic .
+ex:exeggutor a ex:pokemon ; rdfs:label "Exeggutor" ; ex:pokedexNum 103 ; ex:evolvesFrom ex:exeggcute ; ex:isType ex:grass , ex:psychic .
 
-ex:cubone a ex:pokemon ; ex:pokedexNum 104 ; ex:isType ex:ground .
-ex:marowak a ex:pokemon ; ex:pokedexNum 105 ; ex:evolvesFrom ex:cubone ; ex:isType ex:ground .
+ex:cubone a ex:pokemon ; rdfs:label "Cubone" ; ex:pokedexNum 104 ; ex:isType ex:ground .
+ex:marowak a ex:pokemon ; rdfs:label "Cubone" ; ex:pokedexNum 105 ; ex:evolvesFrom ex:cubone ; ex:isType ex:ground .
 
-ex:hitmonlee a ex:pokemon ; ex:pokedexNum 106 ; ex:isType ex:fighting .
-ex:hitmonchan a ex:pokemon ; ex:pokedexNum 107 ; ex:isType ex:fighting .
+ex:hitmonlee a ex:pokemon ; rdfs:label "Hitmonlee" ; ex:pokedexNum 106 ; ex:isType ex:fighting .
+ex:hitmonchan a ex:pokemon ; rdfs:label "Hitmonchan" ; ex:pokedexNum 107 ; ex:isType ex:fighting .
 
-ex:lickitung a ex:pokemon ; ex:pokedexNum 108 ; ex:isType ex:normal .
+ex:lickitung a ex:pokemon ; rdfs:label "Lickitung" ; ex:pokedexNum 108 ; ex:isType ex:normal .
 
-ex:koffing a ex:pokemon ; ex:pokedexNum 109 ; ex:isType ex:poison .
-ex:weezing a ex:pokemon ; ex:pokedexNum 110 ; ex:evolvesFrom ex:koffing ; ex:isType ex:poison .
+ex:koffing a ex:pokemon ; rdfs:label "Koffing" ; ex:pokedexNum 109 ; ex:isType ex:poison .
+ex:weezing a ex:pokemon ; rdfs:label "Weezing" ; ex:pokedexNum 110 ; ex:evolvesFrom ex:koffing ; ex:isType ex:poison .
 
-ex:rhyhorn a ex:pokemon ; ex:pokedexNum 111 ; ex:isType ex:ground , ex:rock .
-ex:rhydon a ex:pokemon ; ex:pokedexNum 112 ; ex:evolvesFrom ex:rhyhorn ; ex:isType ex:ground , ex:rock .
+ex:rhyhorn a ex:pokemon ; rdfs:label "Rhyhorn" ; ex:pokedexNum 111 ; ex:isType ex:ground , ex:rock .
+ex:rhydon a ex:pokemon ; rdfs:label "Rhydon" ; ex:pokedexNum 112 ; ex:evolvesFrom ex:rhyhorn ; ex:isType ex:ground , ex:rock .
 
-ex:chansey a ex:pokemon ; ex:pokedexNum 113 ; ex:isType ex:normal .
+ex:chansey a ex:pokemon ; rdfs:label "Chansey" ; ex:pokedexNum 113 ; ex:isType ex:normal .
 
-ex:tangela a ex:pokemon ; ex:pokedexNum 114 ; ex:isType ex:grass .
+ex:tangela a ex:pokemon ; rdfs:label "Tangela" ; ex:pokedexNum 114 ; ex:isType ex:grass .
 
-ex:kangaskhan a ex:pokemon ; ex:pokedexNum 115 ; ex:isType ex:normal .
+ex:kangaskhan a ex:pokemon ; rdfs:label "Kangaskhan" ; ex:pokedexNum 115 ; ex:isType ex:normal .
 
-ex:horsea a ex:pokemon ; ex:pokedexNum 116 ; ex:isType ex:water .
-ex:seadra a ex:pokemon ; ex:pokedexNum 117 ; ex:evolvesFrom ex:horsea ; ex:isType ex:water .
+ex:horsea a ex:pokemon ; rdfs:label "Horsea" ; ex:pokedexNum 116 ; ex:isType ex:water .
+ex:seadra a ex:pokemon ; rdfs:label "Seadra" ; ex:pokedexNum 117 ; ex:evolvesFrom ex:horsea ; ex:isType ex:water .
 
-ex:goldeen a ex:pokemon ; ex:pokedexNum 118 ; ex:isType ex:water .
-ex:seaking a ex:pokemon ; ex:pokedexNum 119 ; ex:evolvesFrom ex:goldeen ; ex:isType ex:water .
+ex:goldeen a ex:pokemon ; rdfs:label "Goldeen" ; ex:pokedexNum 118 ; ex:isType ex:water .
+ex:seaking a ex:pokemon ; rdfs:label "Seaking" ; ex:pokedexNum 119 ; ex:evolvesFrom ex:goldeen ; ex:isType ex:water .
 
-ex:staryu a ex:pokemon ; ex:pokedexNum 120 ; ex:isType ex:water .
-ex:starmie a ex:pokemon ; ex:pokedexNum 121 ; ex:evolvesFrom ex:staryu ; ex:isType ex:water , ex:psychic .
+ex:staryu a ex:pokemon ; rdfs:label "Staryu" ; ex:pokedexNum 120 ; ex:isType ex:water .
+ex:starmie a ex:pokemon ; rdfs:label "Starmie" ; ex:pokedexNum 121 ; ex:evolvesFrom ex:staryu ; ex:isType ex:water , ex:psychic .
 
-ex:mr_mime a ex:pokemon ; ex:pokedexNum 122 ; ex:isType ex:psychic , ex:fairy .
+ex:mr_mime a ex:pokemon ; rdfs:label "Mr. Mime" ; ex:pokedexNum 122 ; ex:isType ex:psychic , ex:fairy .
 
-ex:scyther a ex:pokemon ; ex:pokedexNum 123 ; ex:isType ex:bug , ex:flying .
+ex:scyther a ex:pokemon ; rdfs:label "Scyther" ; ex:pokedexNum 123 ; ex:isType ex:bug , ex:flying .
 
-ex:jynx a ex:pokemon ; ex:pokedexNum 124 ; ex:isType ex:ice , ex:psychic .
+ex:jynx a ex:pokemon ; rdfs:label "Jynx" ; ex:pokedexNum 124 ; ex:isType ex:ice , ex:psychic .
 
-ex:electabuzz a ex:pokemon ; ex:pokedexNum 125 ; ex:isType ex:electric .
+ex:electabuzz a ex:pokemon ; rdfs:label "Electabuzz" ; ex:pokedexNum 125 ; ex:isType ex:electric .
 
-ex:magmar a ex:pokemon ; ex:pokedexNum 126 ; ex:isType ex:fire .
+ex:magmar a ex:pokemon ; rdfs:label "Magmar" ; ex:pokedexNum 126 ; ex:isType ex:fire .
 
-ex:pinsir a ex:pokemon ; ex:pokedexNum 127 ; ex:isType ex:bug .
+ex:pinsir a ex:pokemon ; rdfs:label "Pinsir" ; ex:pokedexNum 127 ; ex:isType ex:bug .
 
-ex:tauros a ex:pokemon ; ex:pokedexNum 128 ; ex:isType ex:normal .
+ex:tauros a ex:pokemon ; rdfs:label "Tauros" ; ex:pokedexNum 128 ; ex:isType ex:normal .
 
-ex:magikarp a ex:pokemon ; ex:pokedexNum 129 ; ex:isType ex:water .
-ex:gyarados a ex:pokemon ; ex:pokedexNum 130 ; ex:evolvesFrom ex:magikarp ; ex:isType ex:water , ex:flying .
+ex:magikarp a ex:pokemon ; rdfs:label "Magikarp" ; ex:pokedexNum 129 ; ex:isType ex:water .
+ex:gyarados a ex:pokemon ; rdfs:label "Gyarados" ; ex:pokedexNum 130 ; ex:evolvesFrom ex:magikarp ; ex:isType ex:water , ex:flying .
 
-ex:lapras a ex:pokemon ; ex:pokedexNum 131 ; ex:isType ex:water , ex:ice .
+ex:lapras a ex:pokemon ; rdfs:label "Lapras" ; ex:pokedexNum 131 ; ex:isType ex:water , ex:ice .
 
-ex:ditto a ex:pokemon ; ex:pokedexNum 132 ; ex:isType ex:normal .
+ex:ditto a ex:pokemon ; rdfs:label "Ditto" ; ex:pokedexNum 132 ; ex:isType ex:normal .
 
-ex:eevee a ex:pokemon ; ex:pokedexNum 133 ; ex:isType ex:normal .
-ex:vaporeon a ex:pokemon ; ex:pokedexNum 134 ; ex:evolvesFrom ex:eevee ; ex:isType ex:water .
-ex:jolteon a ex:pokemon ; ex:pokedexNum 135 ; ex:evolvesFrom ex:eevee ; ex:isType ex:electric .
-ex:flareon a ex:pokemon ; ex:pokedexNum 136 ; ex:evolvesFrom ex:eevee ; ex:isType ex:fire .
+ex:eevee a ex:pokemon ; rdfs:label "Eevee" ; ex:pokedexNum 133 ; ex:isType ex:normal .
+ex:vaporeon a ex:pokemon ; rdfs:label "Vaporeon" ; ex:pokedexNum 134 ; ex:evolvesFrom ex:eevee ; ex:isType ex:water .
+ex:jolteon a ex:pokemon ; rdfs:label "Jolteon" ; ex:pokedexNum 135 ; ex:evolvesFrom ex:eevee ; ex:isType ex:electric .
+ex:flareon a ex:pokemon ; rdfs:label "Flareon" ; ex:pokedexNum 136 ; ex:evolvesFrom ex:eevee ; ex:isType ex:fire .
 
-ex:porygon a ex:pokemon ; ex:pokedexNum 137 ; ex:isType ex:normal .
+ex:porygon a ex:pokemon ; rdfs:label "Porygon" ; ex:pokedexNum 137 ; ex:isType ex:normal .
 
-ex:omanyte a ex:pokemon ; ex:pokedexNum 138 ; ex:isType ex:rock , ex:water .
-ex:omastar a ex:pokemon ; ex:pokedexNum 139 ; ex:evolvesFrom ex:omanyte ; ex:isType ex:rock , ex:water .
+ex:omanyte a ex:pokemon ; rdfs:label "Omanyte" ; ex:pokedexNum 138 ; ex:isType ex:rock , ex:water .
+ex:omastar a ex:pokemon ; rdfs:label "Omastar" ; ex:pokedexNum 139 ; ex:evolvesFrom ex:omanyte ; ex:isType ex:rock , ex:water .
 
-ex:kabuto a ex:pokemon ; ex:pokedexNum 140 ; ex:isType ex:rock , ex:water .
-ex:kabutops a ex:pokemon ; ex:pokedexNum 141 ; ex:evolvesFrom ex:kabuto ; ex:isType ex:rock , ex:water .
+ex:kabuto a ex:pokemon ; rdfs:label "Kabuto" ; ex:pokedexNum 140 ; ex:isType ex:rock , ex:water .
+ex:kabutops a ex:pokemon ; rdfs:label "Kabutops" ; ex:pokedexNum 141 ; ex:evolvesFrom ex:kabuto ; ex:isType ex:rock , ex:water .
 
-ex:aerodactyl a ex:pokemon ; ex:pokedexNum 142 ; ex:isType ex:rock , ex:flying .
+ex:aerodactyl a ex:pokemon ; rdfs:label "Aerodactyl" ; ex:pokedexNum 142 ; ex:isType ex:rock , ex:flying .
 
-ex:snorlax a ex:pokemon ; ex:pokedexNum 143 ; ex:isType ex:normal .
+ex:snorlax a ex:pokemon ; rdfs:label "Snorlax" ; ex:pokedexNum 143 ; ex:isType ex:normal .
 
-ex:articuno a ex:pokemon ; ex:pokedexNum 144 ; ex:isType ex:ice , ex:flying .
-ex:zapdos a ex:pokemon ; ex:pokedexNum 145 ; ex:isType ex:electric , ex:flying .
-ex:moltres a ex:pokemon ; ex:pokedexNum 146 ; ex:isType ex:fire , ex:flying .
+ex:articuno a ex:pokemon ; rdfs:label "Articuno" ; ex:pokedexNum 144 ; ex:isType ex:ice , ex:flying .
+ex:zapdos a ex:pokemon ; rdfs:label "Zapdos" ; ex:pokedexNum 145 ; ex:isType ex:electric , ex:flying .
+ex:moltres a ex:pokemon ; rdfs:label "Moltres" ; ex:pokedexNum 146 ; ex:isType ex:fire , ex:flying .
 
-ex:dratini a ex:pokemon ; ex:pokedexNum 147 ; ex:isType ex:dragon .
-ex:dragonair a ex:pokemon ; ex:pokedexNum 148 ; ex:evolvesFrom ex:dratini ; ex:isType ex:dragon .
-ex:dragonite a ex:pokemon ; ex:pokedexNum 149 ; ex:evolvesFrom ex:dragonair ; ex:isType ex:dragon , ex:flying .
+ex:dratini a ex:pokemon ; rdfs:label "Dratini" ; ex:pokedexNum 147 ; ex:isType ex:dragon .
+ex:dragonair a ex:pokemon ; rdfs:label "Dragonair" ; ex:pokedexNum 148 ; ex:evolvesFrom ex:dratini ; ex:isType ex:dragon .
+ex:dragonite a ex:pokemon ; rdfs:label "Dragonite" ; ex:pokedexNum 149 ; ex:evolvesFrom ex:dragonair ; ex:isType ex:dragon , ex:flying .
 
-ex:mewtwo a ex:pokemon ; ex:pokedexNum 150 ; ex:isType ex:psychic .
+ex:mewtwo a ex:pokemon ; rdfs:label "Mewtwo" ; ex:pokedexNum 150 ; ex:isType ex:psychic .
 
-ex:mew a ex:pokemon ; ex:pokedexNum 151 ; ex:isType ex:psychic .
+ex:mew a ex:pokemon ; rdfs:label "Mew" ; ex:pokedexNum 151 ; ex:isType ex:psychic .

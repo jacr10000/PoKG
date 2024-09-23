@@ -47,6 +47,12 @@ sh:TypeShape a sh:NodeShape;
         sh:nodekind sh:IRI ;
         sh:class ex:type ] ;
 
+        sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodekind sh:Literal ] ;
+
     sh:property [
         sh:path ex:strongAgainst ;
         sh:nodekind sh:IRI ;

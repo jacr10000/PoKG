@@ -1,4 +1,3 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,18 +6,19 @@
 @prefix schema: <http://schema.org/> .
 @prefix ex: <http://example.org/pokemon#> .
 
-ex:pokemon a owl:Class .
-ex:type a owl:Class .
-ex:move a owl:Class .
+#Classes
+ex:pokemon a owl:Class ; rdfs:label "pokemon" .
+ex:type a owl:Class ; rdfs:label "Type" .
 
-ex:isType a rdf:Property ; rdfs:domain ex:pokemon ; rdfs:range ex:type .
-ex:moveType a rdf:Property ; rdfs:domain ex:move ; rdfs:range ex:type .
-ex:evolvesFrom a rdf:Property ; rdfs:domain ex:pokemon ; rdfs:range ex:pokemon .
-ex:weakAgainst a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type ; owl:inverseOf ex:strongAgainst .
-ex:strongAgainst a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type ; owl:inverseOf ex:weakAgainst .
-ex:immuneTo a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type .
-ex:notVeryEffectiveTo a rdf:Property ; rdfs:domain ex:type ; rdfs:range ex:type .
+#Properties
+ex:isType a rdf:Property ; rdfs:label "is of type" ; rdfs:domain ex:pokemon ; rdfs:range ex:type .
+ex:evolvesFrom a rdf:Property ; rdfs:label "evolves from" ; rdfs:domain ex:pokemon ; rdfs:range ex:pokemon .
+ex:weakAgainst a rdf:Property ; rdfs:label "is weak against" ; rdfs:domain ex:type ; rdfs:range ex:type ; owl:inverseOf ex:strongAgainst .
+ex:strongAgainst a rdf:Property ; rdfs:label "is strong against" ; rdfs:domain ex:type ; rdfs:range ex:type ; owl:inverseOf ex:weakAgainst .
+ex:immuneTo a rdf:Property ; rdfs:label "is immune to" ; rdfs:domain ex:type ; rdfs:range ex:type .
+ex:notVeryEffectiveTo a rdf:Property ; rdfs:label "is not very effective against" ; rdfs:domain ex:type ; rdfs:range ex:type .
 
+#Types
 ex:normal rdfs:subClassOf ex:type ; rdfs:label "normal" ; ex:weakAgainst ex:fighting .
 ex:normal ex:immuneTo ex:ghost .
 ex:normal ex:notVeryEffectiveTo ex:rock , ex:steel .
